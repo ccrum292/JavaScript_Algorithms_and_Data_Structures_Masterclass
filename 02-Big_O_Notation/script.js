@@ -27,6 +27,7 @@ const addUpToExampleTwo = n => {
 
 // 3 operations (few)
 // O(1) time
+
 let t3 = performance.now();
 addUpToExampleTwo(1000000000);
 let t4 = performance.now();
