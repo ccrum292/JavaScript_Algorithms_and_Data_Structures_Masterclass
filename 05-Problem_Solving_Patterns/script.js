@@ -310,32 +310,52 @@
 
 
 
-const findLongestSubstring = (str) => {
+// const findLongestSubstring = (str) => {
 
-  let objCounter = {};
-  let objKey = 0;
-  let longestString = 0;
+//   let objCounter = {};
+//   let objKey = 0;
+//   let longestString = 0;
 
-  for (let i = 0; i < str.length; i++) {
-    if (str[i] === str[i + 1]) {
-      objKey += 1;
-      objCounter[objKey] = 1;
-    } else {
-      if (!objCounter[objKey]) objCounter[objKey] = 1;
-      else objKey[objKey] += 1;
-    }
-  }
+//   for (let i = 0; i < str.length; i++) {
+//     if (str[i] === str[i + 1]) {
+//       objKey += 1;
+//       objCounter[objKey] = 1;
+//     } else {
+//       if (!objCounter[objKey]) objCounter[objKey] = 1;
+//       else objKey[objKey] += 1;
+//     }
+//   }
 
-  for (const key in objCounter) {
-    console.log(objCounter[key], longestString)
-    if (objCounter[key] > longestString) longestString = objCounter[key];
-  }
+//   for (const key in objCounter) {
+//     console.log(objCounter[key], longestString)
+//     if (objCounter[key] > longestString) longestString = objCounter[key];
+//   }
 
-  return longestString;
+//   return longestString;
 
-}
+// }
+
+// solution
+
+// function findLongestSubstring(str) {
+//   let longest = 0;
+//   let seen = {};
+//   let start = 0;
+ 
+//   for (let i = 0; i < str.length; i++) {
+//     let char = str[i];
+//     if (seen[char]) {
+//       start = Math.max(start, seen[char]);
+//     }
+//     // index - beginning of substring + 1 (to include current in count)
+//     longest = Math.max(longest, i - start + 1);
+//     // store the index of the next char so as to not double count
+//     seen[char] = i + 1;
+//   }
+//   return longest;
+// }
 
 
-console.log(findLongestSubstring('bbbbbbbbb'))
-console.log(findLongestSubstring('rithmschool'))
+// console.log(findLongestSubstring('bbbbbbbbb'))
+// console.log(findLongestSubstring('rithmschool'))
 
